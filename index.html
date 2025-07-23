@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chakri Chandaka - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body class="flex flex-col min-h-screen m-0 font-inter">
+  <!-- Dark Mode Toggle (Hidden Checkbox) -->
+  <input type="checkbox" id="darkModeToggle" class="hidden" />
+
+  <!-- Animated Bubbles Background -->
+  <div class="stars-container">
+    <div class="star" style="left: 5%; animation-delay: 0s;"></div>
+    <div class="star" style="left: 15%; animation-delay: 2s;"></div>
+    <div class="star" style="left: 25%; animation-delay: 4s;"></div>
+    <div class="star" style="left: 35%; animation-delay: 1s;"></div>
+    <div class="star" style="left: 45%; animation-delay: 3s;"></div>
+    <div class="star" style="left: 55%; animation-delay: 5s;"></div>
+    <div class="star" style="left: 65%; animation-delay: 0.5s;"></div>
+    <div class="star" style="left: 75%; animation-delay: 2.5s;"></div>
+    <div class="star" style="left: 85%; animation-delay: 1.5s;"></div>
+    <div class="star" style="left: 95%; animation-delay: 3.5s;"></div>
+  </div>
+
+
+
+  <!-- Header -->
+  <nav class="container px-6 py-2 mx-auto">
+  <div class="flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#home"
+      class="text-2xl font-bold text-purple-600 transition-transform duration-300 logo-link hover:scale-105">
+      Portfolio
+    </a>
+
+    <!-- Navigation Links (only visible from 1024px and up) -->
+    <div class="hidden lg:flex space-x-8">
+      <a href="#home" class="text-gray-700 transition-colors duration-300 nav-link hover:text-purple-600">Home</a>
+      <a href="#about" class="text-gray-700 transition-colors duration-300 nav-link hover:text-purple-600">About Me</a>
+      <a href="#skills" class="text-gray-700 transition-colors duration-300 nav-link hover:text-purple-600">Skills</a>
+      <a href="#certifications"
+        class="text-gray-700 transition-colors duration-300 nav-link hover:text-purple-600">Certifications</a>
+      <a href="#projects" class="text-gray-700 transition-colors duration-300 nav-link hover:text-purple-600">Projects</a>
+      <a href="#contact" class="text-gray-700 transition-colors duration-300 nav-link hover:text-purple-600">Contact</a>
+    </div>
+
+    <!-- Theme Toggle -->
+    <label for="darkModeToggle" class="cursor-pointer theme-switch">
+      <span class="slider">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+      </span>
+    </label>
+  </div>
+</nav>
+
+
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="relative flex items-center justify-center min-h-screen pt-20">
+    <article>
+      <div class="container relative z-10 px-6 mx-auto text-center">
+        <div class="inline-block mb-8 profile-image-wrapper">
+          <img src="./chakri1.jpg" alt="Chakri Chandaka"
+            class="object-cover h-64 mx-auto border-4 border-white rounded-full shadow-lg w-62 profile-image" />
+          <span class="bubble-dot"></span>
+          <span class="bubble-dot"></span>
+          <span class="bubble-dot"></span>
+        </div>
+        <h2 class="mb-2 text-lg text-gray-900 dark:text-gray-300">Hi, I'm</h2>
+        <h1 class="mb-2 text-5xl font-bold text-gray-800 md:text-6xl">
+          <span class="typing-text">Chakri Chandaka</span>
+        </h1>
+        <h3 class="mb-2 text-2xl font-semibold text-emerald-600 dark:text-emerald-400">
+
+        </h3>
+        <h4 class="mb-6 text-4xl font-bold text-blue-700 dark:text-blue-400 md:text-3xl">
+          Full Stack Developer
+        </h4>
+
+        <p class="home-text max-w-2xl mx-auto mb-8 leading-relaxed text-black-900 dark:text-black-900">
+          I break down complex user experience problems to create integrity
+          focussed solutions that connect billions of people
+        </p>
+
+        <div class="flex items-center justify-center mb-8 space-x-8">
+          <div class=" text-center">
+            <div class="text-2xl font-bold text-sky-800 dark:text-sky-900">
+              1+
+            </div>
+            <div class="text-sm text-sky-600 dark:text-sky-900">Years</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold text-sky-900 dark:text-sky-900">
+              5+
+            </div>
+            <div class="text-sm text-gray-600 dark:text-sky-900">
+              Projects
+            </div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold text-sky-900 dark:text-sky-900">
+              90%
+            </div>
+            <div class="text-sm text-sky-900 dark:text-sky-900">Skills</div>
+          </div>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center mb-8 space-x-4">
+          <a href="https://www.linkedin.com/in/chandaka-chakri-837670274/"
+            class="flex items-center justify-center w-10 h-10 text-white transition-all duration-300 ease-out rounded-full shadow-md bg-gradient-to-br from-purple-600 to-purple-800 hover:scale-110 hover:rotate-6 hover:bg-gradient-to-br hover:from-purple-700 hover:to-purple-900 hover:shadow-lg hover:animate-pulse">
+            <i class="text-xl fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/Chakriroy11"
+            class="flex items-center justify-center w-10 h-10 text-white transition-all duration-300 ease-out rounded-full shadow-md bg-gradient-to-br from-purple-600 to-purple-800 hover:scale-110 hover:rotate-6 hover:bg-gradient-to-br hover:from-purple-700 hover:to-purple-900 hover:shadow-lg hover:animate-pulse">
+            <i class="text-xl fab fa-github"></i>
+          </a>
+          <a href="https://www.instagram.com/chakri_roy__/"
+            class="flex items-center justify-center w-10 h-10 text-white transition-all duration-300 ease-out rounded-full shadow-md bg-gradient-to-br from-purple-600 to-purple-800 hover:scale-110 hover:rotate-6 hover:bg-gradient-to-br hover:from-purple-700 hover:to-purple-900 hover:shadow-lg hover:animate-pulse">
+            <i class="text-xl fab fa-instagram"></i>
+          </a>
+
+        </div>
+
+        <!-- Download Resume Button -->
+        <div class="flex justify-center space-x-4">
+          <div class="flex justify-center mb-8 space-x-4">
+            <a href="data:text/plain;charset=utf-8,This is a sample CV text. Download successful!"
+              download="chandaka chakri.pdf"
+              class="px-6 py-2.5 text-white bg-gradient-to-r from-purple-600 to-purple-800 rounded-full shadow-md hover:from-purple-700 hover:to-purple-900 hover:translate-y-[-4px] transition-all duration-300 ease-out animate-pulse download-btn">
+              Download CV
+            </a>
+            <a href="data:text/plain;charset=utf-8,Contact: chandaka.chakrii@gmail.com | Phone: +91 8187826411"
+              download="contact-info.txt"
+              class="px-6 py-2.5 text-purple-600 border-2 border-purple-600 rounded-full shadow-md hover:bg-purple-600 hover:text-white hover:translate-y-[-4px] transition-all duration-300 ease-out animate-pulse contact-btn">
+              Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="relative py-20">
+    <article>
+      <div class="container px-6 mx-auto">
+        <div class="max-w-6xl mx-auto">
+          <!-- Heading -->
+          <h2
+            class="mb-16 text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-purple-700 md:text-5xl hover:-translate-y-2 hover:rotate-0 transition-all duration-300 ease-out hover:after:content-[''] hover:after:block hover:after:w-3/4 hover:after:h-0.5 hover:after:bg-gradient-to-r hover:after:from-purple-600 hover:after:to-pink-500 hover:after:absolute hover:after:left-1/2 hover:after:-translate-x-1/2 hover:after:bottom-[-6px] hover:after:animate-slide-in shadow-lg">
+            About Me
+          </h2>
+
+          <!-- Flex Container -->
+          <div class="flex flex-col-reverse items-center justify-center gap-10 md:flex-row md:gap-16">
+
+            <!-- Text Left -->
+            <div class="w-full md:w-1/2 text-left">
+              <p class="home-text text-lg leading-relaxed text-sky-900 dark:text-sky-900">
+                Aspiring Full Stack Developer with strong foundations in JavaScript, React, Node.js, Express, and
+                MongoDB (MERN stack). Currently a final-year BTech student passionate about building responsive,
+                user-friendly web applications. Experienced in developing full-stack projects from scratch, with a keen
+                focus on clean UI/UX and scalable backend architectures. Eager to join high-performing development teams
+                to solve real-world problems through technology and continuous learning.
+              </p>
+            </div>
+
+            <!-- Image Right -->
+            <div class="relative w-64 h-64 group">
+              <div
+                class="absolute inset-0 rounded-lg p-1 bg-gradient-to-tr from-purple-500 via-pink-500 to-yellow-400 group-hover:scale-105 transition-transform duration-300 ease-in-out">
+              </div>
+              <img src="./chakri1.jpg" alt="Chakri Chandaka"
+                class="relative object-cover w-64 h-64 rounded-lg shadow-xl bg-white dark:bg-gray-800" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!--skills section-->
+  <section id="skills" class="relative py-20  text-white">
+  <div class="container px-6 mx-auto">
+    <div class="max-w-6xl mx-auto">
+      <h2
+        class="mb-16 text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-purple-700 md:text-5xl hover:-translate-y-2 hover:rotate-0 transition-all duration-300 ease-out hover:after:content-[''] hover:after:block hover:after:w-3/4 hover:after:h-0.5 hover:after:bg-gradient-to-r hover:after:from-purple-600 hover:after:to-pink-500 hover:after:absolute hover:after:left-1/2 hover:after:-translate-x-1/2 hover:after:bottom-[-6px] hover:after:animate-slide-in shadow-lg"
+      >
+        Skills
+      </h2>
+
+      <div class="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <!-- Skill Circle Template -->
+        <!-- Repeat for each skill with proper stroke-dashoffset and gradient ID -->
+
+        <!-- HTML -->
+        <div class="relative w-32 h-32 mx-auto">
+          <svg class="w-full h-full rotate-[-90deg]" viewBox="0 0 160 160">
+            <circle
+              class="text-gray-700"
+              stroke-width="10"
+              stroke="currentColor"
+              fill="transparent"
+              r="70"
+              cx="80"
+              cy="80"
+            />
+            <circle
+              stroke-width="10"
+              stroke-linecap="round"
+              stroke="url(#html)"
+              fill="transparent"
+              r="70"
+              cx="80"
+              cy="80"
+              stroke-dasharray="440"
+              stroke-dashoffset="44"
+            />
+            <defs>
+              <linearGradient id="html" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#ec4899" />
+                <stop offset="100%" stop-color="#8b5cf6" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-8 h-8 mb-1" />
+            <span class="text-sky-900 font-semibold">90%</span>
+            <p class="text-sky-900">HTML5</p>
+          </div>
+        </div>
+
+        <!-- CSS -->
+        <div class="relative w-32 h-32 mx-auto">
+          <svg class="w-full h-full rotate-[-90deg]" viewBox="0 0 160 160">
+            <circle class="text-gray-700" stroke-width="10" stroke="currentColor" fill="transparent" r="70" cx="80" cy="80" />
+            <circle stroke-width="10" stroke-linecap="round" stroke="url(#css)" fill="transparent" r="70" cx="80" cy="80" stroke-dasharray="440" stroke-dashoffset="66" />
+            <defs>
+              <linearGradient id="css" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#38bdf8" />
+                <stop offset="100%" stop-color="#6366f1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-8 h-8 mb-1" />
+            <span class="text-sky-900 font-semibold">85%</span>
+            <p class="text-sky-900">CSS3</p>
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="relative w-32 h-32 mx-auto">
+          <svg class="w-full h-full rotate-[-90deg]" viewBox="0 0 160 160">
+            <circle class="text-gray-700" stroke-width="10" stroke="currentColor" fill="transparent" r="70" cx="80" cy="80" />
+            <circle stroke-width="10" stroke-linecap="round" stroke="url(#js)" fill="transparent" r="70" cx="80" cy="80" stroke-dasharray="440" stroke-dashoffset="88" />
+            <defs>
+              <linearGradient id="js" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#facc15" />
+                <stop offset="100%" stop-color="#f97316" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-8 h-8 mb-1" />
+            <span class="text-sky-900 font-semibold">80%</span>
+            <p class="text-sky-900">JavaScript</p>
+          </div>
+        </div>
+
+        <!-- React -->
+        <div class="relative w-32 h-32 mx-auto">
+          <svg class="w-full h-full rotate-[-90deg]" viewBox="0 0 160 160">
+            <circle class="text-gray-700" stroke-width="10" stroke="currentColor" fill="transparent" r="70" cx="80" cy="80" />
+            <circle stroke-width="10" stroke-linecap="round" stroke="url(#react)" fill="transparent" r="70" cx="80" cy="80" stroke-dasharray="440" stroke-dashoffset="110" />
+            <defs>
+              <linearGradient id="react" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#bef264" />
+<stop offset="100%" stop-color="#eb36ae" />
+
+
+
+
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-8 h-8 mb-1" />
+            <span class="text-sky-900 font-semibold">75%</span>
+            <p class="text-sky-900">React.js</p>
+          </div>
+        </div>
+
+        <!-- Node.js -->
+        <div class="relative w-32 h-32 mx-auto">
+          <svg class="w-full h-full rotate-[-90deg]" viewBox="0 0 160 160">
+            <circle class="text-gray-700" stroke-width="10" stroke="currentColor" fill="transparent" r="70" cx="80" cy="80" />
+            <circle stroke-width="10" stroke-linecap="round" stroke="url(#node)" fill="transparent" r="70" cx="80" cy="80" stroke-dasharray="440" stroke-dashoffset="132" />
+            <defs>
+              <linearGradient id="node" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#22c55e" />
+                <stop offset="100%" stop-color="#e88e2e" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-8 h-8 mb-1" />
+            <span class="text-sky-900 font-semibold">70%</span>
+            <p class="text-sky-900">Node.js</p>
+          </div>
+        </div>
+
+        <!-- GitHub -->
+        <div class="relative w-32 h-32 mx-auto">
+          <svg class="w-full h-full rotate-[-90deg]" viewBox="0 0 160 160">
+            <circle class="text-gray-700" stroke-width="10" stroke="currentColor" fill="transparent" r="70" cx="80" cy="80" />
+            <circle stroke-width="10" stroke-linecap="round" stroke="url(#git)" fill="transparent" r="70" cx="80" cy="80" stroke-dasharray="440" stroke-dashoffset="66" />
+            <defs>
+              <linearGradient id="git" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#e82e69" />
+                <stop offset="100%" stop-color="#3b82f6" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-8 h-8 mb-1" />
+            <span class="text-sky-900 font-semibold">85%</span>
+            <p class="text-sky-900">GitHub</p>
+          </div>
+        </div>
+
+        <!-- AWS -->
+        <div class="relative w-32 h-32 mx-auto">
+          <svg class="w-full h-full rotate-[-90deg]" viewBox="0 0 160 160">
+            <circle class="text-gray-700" stroke-width="10" stroke="currentColor" fill="transparent" r="70" cx="80" cy="80" />
+            <circle stroke-width="10" stroke-linecap="round" stroke="url(#aws)" fill="transparent" r="70" cx="80" cy="80" stroke-dasharray="440" stroke-dashoffset="176" />
+            <defs>
+              <linearGradient id="aws" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#9ee82e" />
+                <stop offset="100%" stop-color="#ea580c" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <img src="aws.png" class="w-8 h-8 mb-1" />
+            <span class="text-sky-900 font-semibold">60%</span>
+            <p class="text-sky-900">AWS Cloud</p>
+          </div>
+        </div>
+
+        <!-- MySQL -->
+        <div class="relative w-32 h-32 mx-auto">
+          <svg class="w-full h-full rotate-[-90deg]" viewBox="0 0 160 160">
+            <circle class="text-gray-700" stroke-width="10" stroke="currentColor" fill="transparent" r="70" cx="80" cy="80" />
+            <circle stroke-width="10" stroke-linecap="round" stroke="url(#mysql)" fill="transparent" r="70" cx="80" cy="80" stroke-dasharray="440" stroke-dashoffset="110" />
+            <defs>
+              <linearGradient id="mysql" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#e87f2e" />
+                <stop offset="100%" stop-color="#6366f1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-8 h-8 mb-1" />
+            <span class="text-sky-900 font-semibold">75%</span>
+            <p class="text-sky-900">MySQL</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+          <!-- Certifications Section -->
+          <section id="certifications" class="relative py-20">
+            <article>
+              <div class="container px-6 mx-auto">
+                <div class="max-w-6xl mx-auto">
+                  <h2
+                    class="mb-16 text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-teal-500 to-green-600 md:text-5xl hover:-translate-y-2 hover:rotate-0 transition-all duration-300 ease-out hover:after:content-[''] hover:after:block hover:after:w-3/4 hover:after:h-0.5 hover:after:bg-gradient-to-r hover:after:from-blue-600 hover:after:to-teal-500 hover:after:absolute hover:after:left-1/2 hover:after:-translate-x-1/2 hover:after:bottom-[-6px] shadow-lg dark:from-blue-400 dark:via-teal-300 dark:to-green-400 dark:hover:after:from-blue-400 dark:hover:after:to-teal-300">
+                    Certifications
+                  </h2>
+                  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Card 1 -->
+                    <div
+                      class="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl dark:shadow-gray-700 bg-gradient-to-br from-purple-200 via-slate-100 to-blue-200 dark:from-gray-800 dark:via-slate-900 dark:to-slate-800 border border-purple-300 dark:border-slate-700">
+                      <!-- Image -->
+                      <div class="overflow-hidden h-52 relative">
+                        <img
+                          src="https://w3-lab.com/wp-content/uploads/2019/12/Get-the-Most-Fancied-Web-Development-Services-min-scaled.jpg"
+                          alt="Web Development Certificate"
+                          class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500 ease-in-out" />
+                        <!-- Glow effect -->
+                      </div>
+
+                      <!-- Content -->
+                      <div class="p-6 text-center relative z-10">
+                        <h3 class="mb-2 text-2xl font-bold text-purple-800 dark:text-purple-300">
+                          Web Development
+                        </h3>
+                        <p class="mb-1 text-gray-700 dark:text-gray-300 flex items-center justify-center gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-purple-600" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm0 2a8 8 0 0 1 8 8 7.966 7.966 0 0 1-1.368 4.497l-4.297-4.298A2.993 2.993 0 0 0 12 10a2.993 2.993 0 0 0-2.335 1.199l-4.297 4.297A7.966 7.966 0 0 1 4 12a8 8 0 0 1 8-8Zm0 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM7.07 16.93l4.295-4.296a4 4 0 0 1 5.657 0l4.296 4.296A7.965 7.965 0 0 1 12 20a7.965 7.965 0 0 1-4.93-1.07Z" />
+                          </svg>
+                          Web Developer
+                        </p>
+                        <p class="mb-4 text-gray-600 dark:text-gray-400">
+                          <i class="fas fa-calendar-alt text-purple-600 mr-1"></i> 2025
+                        </p>
+                        <a href="./web development.png"
+                          class="inline-block px-4 py-2 text-white bg-gradient-to-r from-purple-600 to-blue-500 rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-300">
+                          View Certificate
+                        </a>
+                      </div>
+                    </div>
+
+
+                    <!-- Card 2 -->
+
+                    <div
+                      class="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl dark:shadow-gray-700 bg-gradient-to-br from-purple-200 via-slate-100 to-blue-200 dark:from-gray-800 dark:via-slate-900 dark:to-slate-800 border border-purple-300 dark:border-slate-700">
+                      <!-- Image -->
+                      <div class="overflow-hidden h-52 relative">
+                        <img
+                          src="https://tse4.mm.bing.net/th/id/OIP.j18U6uvAg-ta2XBvDKNQlAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
+                          alt="Web Development Certificate"
+                          class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500 ease-in-out" />
+                        <!-- Glow effect -->
+                      </div>
+
+                      <!-- Content -->
+                      <div class="p-6 text-center relative z-10">
+                        <h3 class="mb-2 text-2xl font-bold text-purple-800 dark:text-purple-300">
+                          Full-Stack
+                        </h3>
+                        <p class="mb-1 text-gray-700 dark:text-gray-300 flex items-center justify-center gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-purple-600" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm0 2a8 8 0 0 1 8 8 7.966 7.966 0 0 1-1.368 4.497l-4.297-4.298A2.993 2.993 0 0 0 12 10a2.993 2.993 0 0 0-2.335 1.199l-4.297 4.297A7.966 7.966 0 0 1 4 12a8 8 0 0 1 8-8Zm0 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM7.07 16.93l4.295-4.296a4 4 0 0 1 5.657 0l4.296 4.296A7.965 7.965 0 0 1 12 20a7.965 7.965 0 0 1-4.93-1.07Z" />
+                          </svg>
+                          Full-Stack (MERN)
+                        </p>
+                        <p class="mb-4 text-gray-600 dark:text-gray-400">
+                          <i class="fas fa-calendar-alt text-purple-600 mr-1"></i> 2025
+                        </p>
+                        <a href="./full stack.png"
+                          class="inline-block px-4 py-2 text-white bg-gradient-to-r from-purple-600 to-blue-500 rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-300">
+                          View Certificate
+                        </a>
+                      </div>
+                    </div>
+
+
+                    <div
+                      class="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl dark:shadow-gray-700 bg-gradient-to-br from-purple-200 via-slate-100 to-blue-200 dark:from-gray-800 dark:via-slate-900 dark:to-slate-800 border border-purple-300 dark:border-slate-700">
+                      <!-- Image -->
+                      <div class="overflow-hidden h-52 relative">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
+                          alt="React JS Logo"
+                          class="object-contain w-full h-full p-4 group-hover:scale-110 transition-transform duration-500 ease-in-out" />
+                      </div>
+
+
+
+                      <!-- Content -->
+                      <div class="p-6 text-center relative z-10">
+                        <h3 class="mb-2 text-2xl font-bold text-purple-800 dark:text-purple-300">
+                          React JS
+                        </h3>
+                        <p class="mb-1 text-gray-700 dark:text-gray-300 flex items-center justify-center gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-purple-600" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm0 2a8 8 0 0 1 8 8 7.966 7.966 0 0 1-1.368 4.497l-4.297-4.298A2.993 2.993 0 0 0 12 10a2.993 2.993 0 0 0-2.335 1.199l-4.297 4.297A7.966 7.966 0 0 1 4 12a8 8 0 0 1 8-8Zm0 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM7.07 16.93l4.295-4.296a4 4 0 0 1 5.657 0l4.296 4.296A7.965 7.965 0 0 1 12 20a7.965 7.965 0 0 1-4.93-1.07Z" />
+                          </svg>
+                          React.js
+                        </p>
+                        <p class="mb-4 text-gray-600 dark:text-gray-400">
+                          <i class="fas fa-calendar-alt text-purple-600 mr-1"></i> 2025
+                        </p>
+                        <a href="./reactjs.png"
+                          class="inline-block px-4 py-2 text-white bg-gradient-to-r from-purple-600 to-blue-500 rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-300">
+                          View Certificate
+                        </a>
+                      </div>
+                    </div>
+
+
+                    <div
+                      class="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl dark:shadow-gray-700 bg-gradient-to-br from-purple-200 via-slate-100 to-blue-200 dark:from-gray-800 dark:via-slate-900 dark:to-slate-800 border border-purple-300 dark:border-slate-700">
+                      <!-- Image -->
+                      <div class="overflow-hidden h-52 relative">
+                        <img
+                          src="https://tse4.mm.bing.net/th/id/OIP.j18U6uvAg-ta2XBvDKNQlAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
+                          alt="MERN Stack Certificate"
+                          class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500 ease-in-out" />
+                      </div>
+
+
+
+                      <!-- Content -->
+                      <div class="p-6 text-center relative z-10">
+                        <h3 class="mb-2 text-2xl font-bold text-purple-800 dark:text-purple-300">
+                          Full-Stack
+                        </h3>
+                        <p class="mb-1 text-gray-700 dark:text-gray-300 flex items-center justify-center gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-purple-600" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm0 2a8 8 0 0 1 8 8 7.966 7.966 0 0 1-1.368 4.497l-4.297-4.298A2.993 2.993 0 0 0 12 10a2.993 2.993 0 0 0-2.335 1.199l-4.297 4.297A7.966 7.966 0 0 1 4 12a8 8 0 0 1 8-8Zm0 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM7.07 16.93l4.295-4.296a4 4 0 0 1 5.657 0l4.296 4.296A7.965 7.965 0 0 1 12 20a7.965 7.965 0 0 1-4.93-1.07Z" />
+                          </svg>
+                          Full-Stack (MERN) in Internshala Trainings
+                        </p>
+                        <p class="mb-4 text-gray-600 dark:text-gray-400">
+                          <i class="fas fa-calendar-alt text-purple-600 mr-1"></i> 2025
+                        </p>
+                        <a href="./inrenshala.png"
+                          class="inline-block px-4 py-2 text-white bg-gradient-to-r from-purple-600 to-blue-500 rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-300">
+                          View Certificate
+                        </a>
+                      </div>
+                    </div>
+
+
+                    <div
+                      class="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl dark:shadow-gray-700 bg-gradient-to-br from-purple-200 via-slate-100 to-blue-200 dark:from-gray-800 dark:via-slate-900 dark:to-slate-800 border border-purple-300 dark:border-slate-700">
+                      <!-- Image -->
+                      <div class="overflow-hidden h-52 relative">
+                        <img src="https://img.freepik.com/free-vector/cyber-security-concept_23-2148532223.jpg"
+                          alt="Cyber Security Certificate"
+                          class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500 ease-in-out" />
+                      </div>
+
+                      <!-- Content -->
+                      <div class="p-6 text-center relative z-10">
+                        <h3 class="mb-2 text-2xl font-bold text-purple-800 dark:text-purple-300">
+                          CYBER SECURITY
+                        </h3>
+                        <p class="mb-1 text-gray-700 dark:text-gray-300 flex items-center justify-center gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-purple-600" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm0 2a8 8 0 0 1 8 8 7.966 7.966 0 0 1-1.368 4.497l-4.297-4.298A2.993 2.993 0 0 0 12 10a2.993 2.993 0 0 0-2.335 1.199l-4.297 4.297A7.966 7.966 0 0 1 4 12a8 8 0 0 1 8-8Zm0 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM7.07 16.93l4.295-4.296a4 4 0 0 1 5.657 0l4.296 4.296A7.965 7.965 0 0 1 12 20a7.965 7.965 0 0 1-4.93-1.07Z" />
+                          </svg>
+                          Introduction to Cyber Security
+                        </p>
+                        <p class="mb-4 text-gray-600 dark:text-gray-400">
+                          <i class="fas fa-calendar-alt text-purple-600 mr-1"></i> 2025
+                        </p>
+                        <a href="./cisco.png"
+                          class="inline-block px-4 py-2 text-white bg-gradient-to-r from-purple-600 to-blue-500 rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-300">
+                          View Certificate
+                        </a>
+                      </div>
+                    </div>
+
+
+                    <!-- Card 3 -->
+                    <div
+                      class="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl dark:shadow-gray-700 bg-gradient-to-br from-purple-200 via-slate-100 to-blue-200 dark:from-gray-800 dark:via-slate-900 dark:to-slate-800 border border-purple-300 dark:border-slate-700">
+                      <!-- Image -->
+                      <div class="overflow-hidden h-52 relative">
+                        <img src="https://www.coursenet.lk/Content/courses/23913/165232420210926.png"
+                          alt="Python Certificate"
+                          class="object-contain w-full h-full p-4 group-hover:scale-110 transition-transform duration-500 ease-in-out" />
+                      </div>
+
+                      <!-- Content -->
+                      <div class="p-6 text-center relative z-10">
+                        <h3 class="mb-2 text-2xl font-bold text-purple-800 dark:text-purple-300">
+                          PYTHON
+                        </h3>
+                        <p class="mb-1 text-gray-700 dark:text-gray-300 flex items-center justify-center gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-purple-600" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                              d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm0 2a8 8 0 0 1 8 8 7.966 7.966 0 0 1-1.368 4.497l-4.297-4.298A2.993 2.993 0 0 0 12 10a2.993 2.993 0 0 0-2.335 1.199l-4.297 4.297A7.966 7.966 0 0 1 4 12a8 8 0 0 1 8-8Zm0 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM7.07 16.93l4.295-4.296a4 4 0 0 1 5.657 0l4.296 4.296A7.965 7.965 0 0 1 12 20a7.965 7.965 0 0 1-4.93-1.07Z" />
+                          </svg>
+                          Python Programming
+                        </p>
+                        <p class="mb-4 text-gray-600 dark:text-gray-400">
+                          <i class="fas fa-calendar-alt text-purple-600 mr-1"></i> 2025
+                        </p>
+                        <a href="./python.png"
+                          class="inline-block px-4 py-2 text-white bg-gradient-to-r from-purple-600 to-blue-500 rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-300">
+                          View Certificate
+                        </a>
+                      </div>
+                    </div>
+
+
+
+
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- Projects Section -->
+          <section id="projects" class="relative py-20">
+            <article>
+              <div class="container px-6 mx-auto">
+                <div class="max-w-6xl mx-auto">
+                  <h2
+                    class="mb-16 text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-purple-700 md:text-5xl hover:-translate-y-2 transition-all duration-300 ease-out shadow-lg">
+                    Projects
+                  </h2>
+
+                  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Project 1 -->
+                    <div
+                      class="overflow-hidden transition-all duration-300 ease-out shadow-lg bg-white/90 backdrop-blur-sm rounded-xl hover:shadow-2xl hover:-translate-y-2 hover:scale-105">
+                      <div class="flex items-center justify-center h-48 bg-gradient-to-br from-purple-600 to-pink-600">
+                        <i class="text-6xl text-white fas fa-shopping-cart"></i>
+                      </div>
+                      <div class="p-6">
+                        <h3 class="mb-3 text-xl font-bold text-gray-800">
+                          Amazon E-Commerce Platform
+                        </h3>
+                        <p class="mb-4 text-gray-600">
+                          Built a robust e-commerce application focused on enhancing customer engagement. like amazon.
+                        </p>
+                        <div class="flex space-x-4">
+                          <a href="https://bhavanishankar7075.github.io/amazon/"
+                            class="flex-1 px-4 py-2 text-white bg-purple-600 rounded-lg hover:bg-purple-700 text-center">View</a>
+                          <a href="https://github.com/Chakriroy11/amazon-main"
+                            class="flex-1 px-4 py-2 text-purple-600 border-2 border-purple-600 rounded-lg hover:bg-purple-600 hover:text-white text-center">GitHub</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Project 6 -->
+                    <div
+                      class="overflow-hidden transition-all duration-300 ease-out shadow-lg bg-white/90 backdrop-blur-sm rounded-xl hover:shadow-2xl hover:-translate-y-2 hover:scale-105">
+                      <div class="flex items-center justify-center h-48 bg-gradient-to-br from-green-600 to-blue-600">
+                        <i class="text-6xl text-white fas fa-home"></i>
+                      </div>
+                      <div class="p-6">
+                        <h3 class="mb-3 text-xl font-bold text-gray-800">
+                          Home Services Provider
+                        </h3>
+                        <p class="mb-4 text-gray-600">
+                          Home services platform offering reliable solutions for maintenance and repairs.
+                        </p>
+                        <div class="flex space-x-4">
+                          <a href="https://home-provider.vercel.app/"
+                            class="flex-1 px-4 py-2 text-white bg-purple-600 rounded-lg hover:bg-purple-700 text-center">View</a>
+                          <a href="https://github.com/Chakriroy11/client"
+                            class="flex-1 px-4 py-2 text-purple-600 border-2 border-purple-600 rounded-lg hover:bg-purple-600 hover:text-white text-center">GitHub</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!--project 5-->
+                    <div
+                      class="overflow-hidden transition-all duration-300 ease-out shadow-lg bg-white/90 backdrop-blur-sm rounded-xl hover:shadow-2xl hover:-translate-y-2 hover:scale-105">
+                      <div class="flex items-center justify-center h-48 bg-gradient-to-br from-blue-600 to-purple-600">
+                        <i class="fas fa-plane-departure text-6xl text-white"></i> <!-- Travel Icon -->
+                      </div>
+                      <div class="p-6">
+                        <h3 class="mb-3 text-xl font-bold text-gray-800">
+                          TRAVEL-TOUR-WEBSITE
+                        </h3>
+                        <p class="mb-4 text-gray-600">
+                          Task management with daily work updates to avoid missing important activities.
+                        </p>
+                        <div class="flex space-x-4">
+                          <a href="https://bhavanishankar7075.github.io/Travel-Tour-Website/"
+                            class="flex-1 px-4 py-2 text-white bg-purple-600 rounded-lg hover:bg-purple-700 text-center">View</a>
+                          <a href="https://github.com/Chakriroy11/Travel-Tour-Website-main"
+                            class="flex-1 px-4 py-2 text-purple-600 border-2 border-purple-600 rounded-lg hover:bg-purple-600 hover:text-white text-center">GitHub</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div
+                      class="overflow-hidden transition-all duration-300 ease-out shadow-lg bg-white/90 backdrop-blur-sm rounded-xl hover:shadow-2xl hover:-translate-y-2 hover:scale-105">
+                      <div class="flex items-center justify-center h-48 bg-gradient-to-br from-blue-600 to-purple-600">
+                        <i class="text-6xl text-white fas fa-tasks"></i>
+                      </div>
+                      <div class="p-6">
+                        <h3 class="mb-3 text-xl font-bold text-gray-800">
+                          RESPONSIVE PROJECT
+                        </h3>
+                        <p class="mb-4 text-gray-600">
+                          Task management with daily work updates to avoid missing important activities.
+                        </p>
+                        <div class="flex space-x-4">
+                          <a href="https://bhavanishankar7075.github.io/RESPONSIVE-PROJ-01/"
+                            class="flex-1 px-4 py-2 text-white bg-purple-600 rounded-lg hover:bg-purple-700 text-center">View</a>
+                          <a href="https://github.com/Chakriroy11/RESPONSIVE-PROJ-01-main"
+                            class="flex-1 px-4 py-2 text-purple-600 border-2 border-purple-600 rounded-lg hover:bg-purple-600 hover:text-white text-center">GitHub</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!--project 3 -->
+                    <div
+                      class="overflow-hidden transition-all duration-300 ease-out shadow-lg bg-white/90 backdrop-blur-sm rounded-xl hover:shadow-2xl hover:-translate-y-2 hover:scale-105">
+                      <div class="flex items-center justify-center h-48 bg-gradient-to-br from-blue-600 to-purple-600">
+                        <i class="fas fa-store text-6xl text-white"></i> <!-- Shop Icon Here -->
+                      </div>
+                      <div class="p-6">
+                        <h3 class="mb-3 text-xl font-bold text-gray-800">
+                          E-commerce platform
+                        </h3>
+                        <p class="mb-4 text-gray-600">
+                          Task management with daily work updates to avoid missing important activities.
+                        </p>
+                        <div class="flex space-x-4">
+                          <a href="https://first-ecommerce-beta.vercel.app/loggedouthomepage"
+                            class="flex-1 px-4 py-2 text-white bg-purple-600 rounded-lg hover:bg-purple-700 text-center">View</a>
+                          <a href="https://github.com/Chakriroy11/e-commerce"
+                            class="flex-1 px-4 py-2 text-purple-600 border-2 border-purple-600 rounded-lg hover:bg-purple-600 hover:text-white text-center">GitHub</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div
+                      class="overflow-hidden transition-all duration-300 ease-out shadow-lg bg-white/90 backdrop-blur-sm rounded-xl hover:shadow-2xl hover:-translate-y-2 hover:scale-105">
+                      <div class="flex items-center justify-center h-48 bg-gradient-to-br from-blue-600 to-purple-600">
+                        <i class="fas fa-clipboard-list text-6xl text-white"></i> <!-- TODO Icon -->
+                      </div>
+                      <div class="p-6">
+                        <h3 class="mb-3 text-xl font-bold text-gray-800">
+                          TODO APPLICATION
+                        </h3>
+                        <p class="mb-4 text-gray-600">
+                          Task management with daily work updates to avoid missing important activities.
+                        </p>
+                        <div class="flex space-x-4">
+                          <a href="https://bhavanishankar7075.github.io/TODO-APPLICATION-01/"
+                            class="flex-1 px-4 py-2 text-white bg-purple-600 rounded-lg hover:bg-purple-700 text-center">View</a>
+                          <a href="https://github.com/Chakriroy11/TODO-APPLICATION-01-main"
+                            class="flex-1 px-4 py-2 text-purple-600 border-2 border-purple-600 rounded-lg hover:bg-purple-600 hover:text-white text-center">GitHub</a>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+
+
+          <!-- Contact Section -->
+          <section id="contact" class="relative py-20">
+            <article>
+              <div class="container px-6 mx-auto">
+                <div class="max-w-4xl mx-auto">
+                  <h2
+                    class="mb-16 text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-yellow-500 to-cyan-500 md:text-5xl hover:-translate-y-2 hover:rotate-0 transition-all duration-300 ease-out hover:after:content-[''] hover:after:block hover:after:w-3/4 hover:after:h-0.5 hover:after:bg-gradient-to-r hover:after:from-red-600 hover:after:to-cyan-500 hover:after:absolute hover:after:left-1/2 hover:after:-translate-x-1/2 hover:after:bottom-[-6px] shadow-lg dark:from-red-400 dark:via-yellow-300 dark:to-cyan-400 dark:hover:after:from-red-400 dark:hover:after:to-cyan-400">
+                    Contact Me
+                  </h2>
+                  <div class="grid gap-12 md:grid-cols-2">
+                    <div>
+                      <h3 class="mb-6 text-2xl font-bold text-gray-800">
+                        Get In Touch
+                      </h3>
+                      <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                          <div class="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full">
+                            <i class="text-white fas fa-envelope"></i>
+                          </div>
+                          <div>
+                            <h4 class="font-semibold text-gray-800">Email</h4>
+                            <p class="text-gray-600">chandakachakri06@gmail.com</p>
+                          </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                          <div class="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full">
+                            <i class="text-white fas fa-phone"></i>
+                          </div>
+                          <div>
+                            <h4 class="font-semibold text-gray-800">Phone</h4>
+                            <p class="text-gray-600">+91 8187826411</p>
+                          </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                          <div class="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full">
+                            <i class="text-white fas fa-map-marker-alt"></i>
+                          </div>
+                          <div>
+                            <h4 class="font-semibold text-gray-800">Location</h4>
+                            <p class="text-gray-600">Vizag, INDIA</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="p-8 shadow-lg bg-white/90 backdrop-blur-sm rounded-xl">
+                      <form class="space-y-6">
+                        <div>
+                          <label for="name" class="block mb-2 text-sm font-medium text-gray-700">Name</label>
+                          <input type="text" id="name" name="name"
+                            class="w-full px-4 py-3 text-gray-900 transition-all duration-300 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                            placeholder="Your Name" ] />
+                        </div>
+                        <div>
+                          <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Email</label>
+                          <input type="email" id="email" name="email"
+                            class="w-full px-4 py-3 text-gray-900 transition-all duration-300 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                            placeholder="your@email.com" />
+                        </div>
+                        <div>
+                          <label for="message" class="block mb-2 text-sm font-medium text-gray-700">Message</label>
+                          <textarea id="message" name="message" rows="4"
+                            class="w-full px-4 py-3 text-gray-900 transition-all duration-300 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                            placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit"
+                          class="w-full py-3 text-white transition-colors duration-300 bg-purple-600 rounded-lg hover:bg-purple-700">
+                          Send Message
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+  </section>
+  <footer class="relative py-12 text-white bg-gray-900">
+    <div class=" container px-4 mx-auto">
+      <div class="text-center">
+        <div class="flex justify-center mb-8 space-x-6">
+          <a href="tel:+91 8187826411"
+            class="px-6 py-3 text-white transition-colors duration-300 bg-purple-600 rounded-full footer-btn hover:bg-purple-700">
+            <i class="mr-2 fas fa-phone"></i>Call Me
+          </a>
+          <a href="mailto:chandakachakri06@gmail.com"
+            class="px-6 py-3 text-white transition-colors duration-300 bg-purple-600 rounded-full footer-btn hover:bg-purple-700">
+            <i class="mr-2 fas fa-envelope"></i>Email Me
+          </a>
+        </div>
+        <p class="text-gray-400">
+          © 2025 Chakri Chandaka. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

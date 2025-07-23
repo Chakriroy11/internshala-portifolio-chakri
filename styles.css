@@ -1,0 +1,964 @@
+/* Import Inter font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(
+    135deg,
+    #d1fae5 0%,
+    #e0f2fe 35%,
+    #ede9fe 70%,
+    #fdf4ff 100%
+  );
+  min-height: 100vh;
+    transition: all 0.3s ease;
+  color: #1a202c;
+}
+
+button:focus,
+button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b5cf6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
+
+/* Focus States for Accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .bg-gradient-to-r,
+  .bg-gradient-to-br {
+    background: #000 !important;
+    color: #fff !important;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:: whiskers::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Container for stars */
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Each individual star */
+.star {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #a855f7;
+  box-shadow: 0 0 10px #a855f7;
+  opacity: 0;
+  animation: moveStar 12s linear infinite;
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+/* Dark mode styling for stars */
+.dark .star {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #ffffff;
+}
+
+/* Animation to move stars from top to bottom */
+@keyframes moveStar {
+  0% {
+    transform: translateY(-100px) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(50px);
+    opacity: 0;
+  }
+}
+
+/* Profile Section CSS */
+.container {
+  padding: 2rem 0;
+}
+
+.profile-image-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  padding: 1rem;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.profile-image-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.profile-image {
+  width: 16rem;
+  height: 16rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  background: linear-gradient(45deg, #a855f7, #d946ef);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box;
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.3);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.profile-image-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #a855f7, #d946ef);
+  z-index: -1;
+  animation: rotateBorder 10s linear infinite;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+
+/* Bubble Dots */
+.bubble-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(45deg, #d946ef, #a855f7);
+  border-radius: 50%;
+  z-index: 5;
+  animation: bubbleAnimation 2s ease-in-out infinite;
+}
+
+.bubble-dot:nth-child(3) {
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bubble-dot:nth-child(4) {
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+}
+
+.bubble-dot:nth-child(5) {
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bubbleAnimation {
+  0% {
+    transform: scale(0.8) translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2) translateY(-5px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8) translateY(0);
+    opacity: 0.5;
+  }
+}
+
+/* Logo Link CSS */
+.logo-link {
+  text-decoration: none;
+  color: #d908f5;
+  font-weight: 700;
+  font-size: 1.5rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: translateY(0) scale(1);
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.logo-link:hover {
+  color: #7c3aed;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.15);
+}
+
+.logo-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, #7c3aed, #a855f7);
+  transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 1px;
+  opacity: 0;
+}
+
+.logo-link:hover::after {
+  width: 80%;
+  opacity: 1;
+}
+
+.logo-link:focus {
+  outline: none;
+  color: #7c3aed;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.1);
+}
+
+.logo-link:focus::after {
+  width: 80%;
+  opacity: 1;
+}
+
+/* Navbar CSS */
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: transparent;
+  opacity: 0.85;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: translateY(0);
+}
+
+.nav-link:hover {
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.2);
+  transform: translateY(-4px);
+  opacity: 1;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.15);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 1px;
+  opacity: 0;
+}
+
+.nav-link:hover::after {
+  width: 70%;
+  opacity: 1;
+}
+
+.nav-link:focus {
+  outline: none;
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.15);
+  transform: translateY(-2px);
+  opacity: 1;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.1);
+}
+
+.nav-link:focus::after {
+  width: 70%;
+  opacity: 1;
+}
+
+/* Home CSS */
+.home-text {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* Typing Animation */
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 3px solid #8b5cf6;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  font-size: larger;
+  color: rgba(131, 10, 244, 0.944);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #8b5cf6;
+  }
+}
+
+/* Theme Toggle Switch */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #8b5cf6;
+  transition: 0.4s;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+
+#darkModeToggle:checked + .theme-switch .slider:before {
+  transform: translateX(30px);
+}
+
+#darkModeToggle:checked + .theme-switch .slider {
+  background: #4c1d95;
+}
+
+.sun-icon {
+  opacity: 1;
+}
+
+.moon-icon {
+  opacity: 0;
+}
+
+#darkModeToggle:checked + .theme-switch .slider .sun-icon {
+  opacity: 0;
+}
+
+#darkModeToggle:checked + .theme-switch .slider .moon-icon {
+  opacity: 1;
+}
+
+/* Dark Mode Styles */
+body:has(#darkModeToggle:checked) {
+  background: linear-gradient(
+    135deg,
+    #1a202c 0%,
+    #2d3748 25%,
+    #1a202c 50%,
+    #2d3748 75%,
+    #1a202c 100%
+  ) !important;
+  color: #f7fafc !important;
+}
+
+/* Header dark mode */
+body:has(#darkModeToggle:checked) header {
+  background: rgba(26, 32, 44, 0.9) !important;
+  border-color: #4a5568 !important;
+}
+
+/* All sections dark mode */
+body:has(#darkModeToggle:checked) section {
+  background: transparent !important;
+  color: #f7fafc !important;
+}
+
+/* Text colors in dark mode */
+body:has(#darkModeToggle:checked) .text-gray-800,
+body:has(#darkModeToggle:checked) .text-gray-700,
+body:has(#darkModeToggle:checked) .text-gray-600,
+body:has(#darkModeToggle:checked) h1,
+body:has(#darkModeToggle:checked) h2,
+body:has(#darkModeToggle:checked) h3,
+body:has(#darkModeToggle:checked) h4,
+body:has(#darkModeToggle:checked) h5,
+body:has(#darkModeToggle:checked) h6,
+body:has(#darkModeToggle:checked) p,
+body:has(#darkModeToggle:checked) span,
+body:has(#darkModeToggle:checked) li,
+body:has(#darkModeToggle:checked) div {
+  color: #f7fafc !important;
+}
+
+/* Navigation links in dark mode */
+body:has(#darkModeToggle:checked) .nav-link {
+  color: #f7fafc !important;
+}
+
+body:has(#darkModeToggle:checked) .nav-link:hover {
+  color: #8b5cf6 !important;
+}
+
+/* Card backgrounds in dark mode */
+body:has(#darkModeToggle:checked) .bg-white\/90 {
+  background: rgba(45, 55, 72, 0.9) !important;
+}
+
+/* Input fields in dark mode */
+body:has(#darkModeToggle:checked) input,
+body:has(#darkModeToggle:checked) textarea {
+  background: rgba(45, 55, 72, 0.9) !important;
+  color: #f7fafc !important;
+  border-color: #4a5568 !important;
+}
+
+/* Labels in dark mode */
+body:has(#darkModeToggle:checked) label {
+  color: #f7fafc !important;
+}
+
+/* Profile image wrapper dark mode */
+body:has(#darkModeToggle:checked) .profile-image-wrapper::before {
+  background: linear-gradient(45deg, #8b5cf6, #ec4899, #3b82f6);
+}
+
+/* Progress Circle Wrapper */
+.progress-circle {
+  --size: 150px;
+  --stroke-width: 10px;
+  --value: 80;
+  --angle: calc(var(--value) * 3.6deg);
+  --gradient-light: conic-gradient(from 0deg, #a78bfa 0deg, #ec4899 var(--angle), #e5e7eb var(--angle));
+  --gradient-dark: conic-gradient(from 0deg, #facc15 0deg, #f472b6 var(--angle), #1f2937 var(--angle));
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: var(--gradient-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  transition: transform 0.4s ease;
+}
+
+.dark .progress-circle {
+  background: var(--gradient-dark);
+}
+
+.progress-circle:hover {
+  transform: scale(1.05);
+}
+
+/* Home css */
+
+.home-text{
+  color: black;
+}
+
+
+
+
+/* Inner Circle - Transparent */
+.inner-circle {
+  width: calc(var(--size) - var(--stroke-width) * 2);
+  height: calc(var(--size) - var(--stroke-width) * 2);
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 0.4rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Skill Logo */
+.inner-circle img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.3rem;
+  transition: transform 0.3s ease;
+}
+
+.progress-circle:hover img {
+  transform: scale(1.15) rotate(6deg);
+}
+
+/* Percent Label */
+.inner-circle .percent {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.dark .inner-circle .percent {
+  color: #f9fafb;
+}
+
+/* Skill Name */
+.inner-circle p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: 0.5px;
+  margin-top: 0.2rem;
+}
+
+.dark .inner-circle p {
+  color: #f3f4f6;
+}
+
+/* About CSS */
+#read-more-target:target {
+  display: block;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Responsive Design */
+/* Mobile First - Base styles for mobile devices (320px and up) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  /* Header adjustments */
+  header {
+    padding: 1rem;
+  }
+
+  /* Typography */
+  .text-6xl {
+    font-size: 2rem !important;
+  }
+
+  .text-5xl {
+    font-size: 1.875rem !important;
+  }
+
+  .text-4xl {
+    font-size: 1.5rem !important;
+  }
+
+  .text-3xl {
+    font-size: 1.25rem !important;
+  }
+
+  .text-2xl {
+    font-size: 1.125rem !important;
+  }
+
+  /* Profile image */
+  .profile-image {
+    width: 6rem !important;
+    height: 6rem !important;
+  }
+
+  /* Grid layouts */
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Spacing */
+  .px-8 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .py-16 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .py-20 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  /* Theme toggle */
+  .theme-switch {
+    width: 50px;
+    height: 25px;
+  }
+
+  .slider {
+    padding: 0 6px;
+  }
+
+  .slider:before {
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+  }
+
+  #darkModeToggle:checked + .theme-switch .slider:before {
+    transform: translateX(25px);
+  }
+
+  /* Typing animation */
+  .typing-text {
+    font-size: 2rem !important;
+    white-space: normal;
+    border-right: none;
+    animation: none;
+  }
+}
+
+/* Small tablets and large phones (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    padding: 0 1.5rem;
+  }
+
+  .text-6xl {
+    font-size: 3rem !important;
+  }
+
+  .text-5xl {
+    font-size: 2.5rem !important;
+  }
+
+  .text-4xl {
+    font-size: 2rem !important;
+  }
+
+  .profile-image {
+    width: 8rem !important;
+    height: 8rem !important;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .py-16 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  .py-20 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+}
+
+/* Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 95%;
+  }
+
+  .text-6xl {
+    font-size: 3.5rem !important;
+  }
+
+  .text-5xl {
+    font-size: 3rem !important;
+  }
+
+  .profile-image {
+    width: 10rem !important;
+    height: 10rem !important;
+  }
+
+  .grid-cols-4 {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Large tablets and small desktops (1025px - 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .text-6xl {
+    font-size: 4rem !important;
+  }
+
+  .text-5xl {
+    font-size: 3.5rem !important;
+  }
+}
+
+/* Large desktops (1281px and up) */
+@media (min-width: 1281px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+  .py-16 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .py-20 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .profile-image {
+    width: 6rem !important;
+    height: 6rem !important;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .profile-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+:root {
+  --circle-size: 120px;
+  --thickness: 10px;
+  --text-color-light: #1f2937;
+  --text-color-dark: #ffffff;
+  --gradient: conic-gradient(
+    #06b6d4,
+    #3b82f6,
+    #8b5cf6,
+    #ec4899,
+    #06b6d4
+  );
+}
+
+/* Outer gradient border based on percentage */
+.progress-circle {
+  --value: 90;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    var(--gradient) calc(var(--value) * 1%),
+    rgba(255, 255, 255, 0.1) 0%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  transition: background 0.4s ease;
+}
+
+/* Inner transparent circle */
+.inner-circle {
+  width: calc(var(--circle-size) - var(--thickness) * 2);
+  height: calc(var(--circle-size) - var(--thickness) * 2);
+  border-radius: 50%;
+  background-color: transparent; /* Transparent background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  text-align: center;
+  padding: 4px;
+  gap: 2px;
+}
+
+/* Icons */
+.inner-circle img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin-bottom: 2px;
+}
+
+/* Text styles */
+.percent-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color-light);
+}
+
+.skill-name {
+  font-size: 0.75rem;
+  color: var(--text-color-light);
+}
+
+/* Dark mode text colors */
+.dark .percent-text,
+.dark .skill-name {
+  color: var(--text-color-dark);
+}
+
+
+
+.skill-circle {
+  --size: 110px;
+  --thickness: 8px;
+  --value: 75; /* percent value */
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  position: relative;
+  background: conic-gradient(
+    #9333ea calc(var(--value) * 1%),
+    rgba(255, 255, 255, 0.08) 0%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Inner transparent circle that "cuts out" the center */
+.skill-circle::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - var(--thickness) * 2);
+  height: calc(100% - var(--thickness) * 2);
+  background-color: transparent;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Content inside the transparent circle */
+.inner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-content img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  margin-bottom: 4px;
+  opacity: 0.9;
+}
+
+.inner-content span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.inner-content p {
+  font-size: 0.75rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .skill-circle {
+    background: conic-gradient(
+      #c084fc calc(var(--value) * 1%),
+      rgba(255, 255, 255, 0.05) 0%
+    );
+  }
+
+  .inner-content span,
+  .inner-content p {
+    color: #f9fafb;
+  }
+}
+
+
+
+
